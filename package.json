@@ -1,0 +1,51 @@
+{
+	"name": "directus-extension-mcp-hello-world",
+	"description": "Demo extension that adds a custom hello_world MCP tool to Directus",
+	"version": "1.0.1",
+	"author": "Joshua Bemenderfer <josh@thederf.com> (https://thederf.com)",
+	"license": "MIT",
+	"keywords": [
+		"directus",
+		"directus-extension",
+		"directus-extension-hook",
+		"mcp",
+		"model-context-protocol",
+		"demo",
+		"example"
+	],
+	"icon": "extension",
+	"type": "module",
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JoshTheDerf/directus-extension-mcp-hello-world.git"
+	},
+	"homepage": "https://github.com/JoshTheDerf/directus-extension-mcp-hello-world#readme",
+	"bugs": {
+		"url": "https://github.com/JoshTheDerf/directus-extension-mcp-hello-world/issues"
+	},
+	"peerDependencies": {
+		"directus-extension-mcp-customization": "^1.0.0"
+	},
+	"directus:extension": {
+		"type": "hook",
+		"path": "dist/index.js",
+		"source": "src/index.ts",
+		"host": "^10.10.0"
+	},
+	"scripts": {
+		"build": "directus-extension build",
+		"dev": "directus-extension build -w --no-minify",
+		"link": "directus-extension link",
+		"validate": "directus-extension validate",
+		"prepublishOnly": "npm run build"
+	},
+	"devDependencies": {
+		"@directus/extensions-sdk": "17.0.3",
+		"@types/node": "^24.10.1",
+		"typescript": "^5.9.3"
+	}
+}

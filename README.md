@@ -4,7 +4,7 @@ A demonstration extension that adds a custom `hello_world` MCP tool to Directus.
 
 ## Prerequisites
 
-This extension requires the `directus-extension-mcp-customization` extension to be installed and enabled first.
+This extension requires the [`directus-extension-mcp-customization`](https://github.com/JoshTheDerf/directus-extension-mcp-customization) extension to be installed and enabled first.
 
 ## What This Extension Does
 
@@ -16,6 +16,14 @@ This extension demonstrates how to add custom MCP tools to Directus by:
 The `hello_world` tool accepts a `name` parameter and returns a personalized greeting.
 
 ## Installation
+
+Install via npm:
+
+```bash
+npm install directus-extension-mcp-hello-world
+```
+
+Or manually:
 
 ```bash
 npm install
@@ -86,4 +94,10 @@ export default defineHook((_, { emitter }) => {
 });
 ```
 
-See the [mcp-customization extension README](../directus-extension-mcp-customization/README.md) for more details on how the integration works.
+See the [`directus-extension-mcp-customization`](https://github.com/JoshTheDerf/directus-extension-mcp-customization) README for more details on how the integration works.
+
+## Related Extensions
+
+- [`directus-extension-mcp-customization`](https://github.com/JoshTheDerf/directus-extension-mcp-customization) - Core framework for custom MCP tools (required)
+- [`directus-extension-mcp-comments`](https://github.com/JoshTheDerf/directus-extension-mcp-comments) - Adds a tool for managing comments to Directus MCP
+- [`directus-extension-mcp-presets`](https://github.com/JoshTheDerf/directus-extension-mcp-presets) - Adds a tool for managing presets/bookmarks to Directus MCP
